@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		img{
+			width: 100px; 
+			position: absolute; 
+			display: none;
+		}
+.garox{
+			
+			width: 100px;
+			position: absolute;
+		}
+		.zombi{
+			width: 100px;
+			position: absolute;
+			display: none;
+		}
+	
+	</style>
+</head>
+<body>
+	<div style="background-image: url(game.png); height: 1000px; background-size: 100% 100%">
+		
+		<button class="btn btn-warning booton"  style="position: absolute;  margin-left: 20%; margin-top: 3%">Увеличить цветы</button>
+		<button class="btn btn-success booton1  " style="position: absolute;  margin-left: 30%; margin-top: 3%" >Увеличить горох</button>
+		<button class=" btn btn-warning gorox" style="position: absolute;  margin-left: 40%; margin-top: 3%" >Улучшение гороха</button>
+		<button class=" btn btn-success zombi1" style="position: absolute;  margin-left: 50%; margin-top: 3%" >Атака зомби</button>
+		<!--цветы 1 ряд-->
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 13%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 19%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 25%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 31%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 37%; ">
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 17%; ">PLANT</button>	
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 23%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 29%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute;  margin-left: 33%; margin-top: 35%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 41%; ">PLANT</button>
+
+		<!--горох 2 ряд-->
+		<img class="shooter point" src="peashooter.png"  style=" margin-left: 40%; margin-top: 13%;">		
+		<img class="shooter point" src="peashooter.png"  style=" margin-left: 40%; margin-top: 19%; ">	
+		<img class="shooter point" src="peashooter.png"  style=" margin-left: 40%; margin-top: 25%;  ">	
+		<img class="shooter point" src="peashooter.png"  style=" margin-left: 40%; margin-top: 31%;">
+		<img class="shooter point" src="peashooter.png"  style=" margin-left: 40%; margin-top: 37%; ">	
+		<img src="1.png" style=" margin-left: 40%; margin-top: 13%; " class="garox">	
+		<img src="1.png" style=" margin-left: 40%; margin-top: 19%; " class="garox">	
+		<img src="1.png" style=" margin-left: 40%; margin-top: 25%; " class="garox">
+		<img src="1.png" style=" margin-left: 40%; margin-top: 31%; " class="garox">
+		<img src="1.png" style=" margin-left: 40%; margin-top: 37%; " class="garox">	
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 17%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 23%; ">PLANT</button>	
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 29%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 35%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 41%; ">PLANT</button>		
+
+		
+					<img src="1.jpg" style=" margin-left: 70%; margin-top: 13%; " class="zombi">	
+					<img src="1.jpg" style=" margin-left: 80%; margin-top: 19%; " class="zombi">	
+					<img src="1.jpg" style=" margin-left: 60%; margin-top: 25%; " class="zombi">
+					<img src="1.jpg" style=" margin-left: 70%; margin-top: 31%; " class="zombi">
+					<img src="1.jpg" style=" margin-left: 90%; margin-top: 37%; " class="zombi">						
+	</div>
+
+<script>
+	 
+
+	let flowers = document.querySelectorAll(".flower");
+	let flower_btn = document.querySelectorAll(".flower_btn");
+
+	let shooter_btn = document.querySelectorAll(".shooter_btn");
+	let shooter = document.querySelectorAll(".shooter");
+
+	
+	let zombi3=document.querySelectorAll(".zombi3");
+
+	//нажатие на цветы
+	flower_btn[0].onclick = function(){
+		flowers[0].style.display = "block"
+		flower_btn[0].style.display = "none"
+
+	}    
+	flower_btn[1].onclick = function(){
+		flowers[1].style.display = "block"
+		flower_btn[1].style.display = "none"
+	}   
+	flower_btn[2].onclick = function(){
+		flowers[2].style.display = "block"
+		flower_btn[2].style.display = "none"
+	}   
+	flower_btn[3].onclick = function(){
+		flowers[3].style.display = "block"
+		flower_btn[3].style.display = "none"
+	}   
+	flower_btn[4].onclick = function(){
+		flowers[4].style.display = "block"
+		flower_btn[4].style.display = "none"
+	}   
+
+
+	//нажатие на горох
+	shooter_btn[0].onclick = function(){
+		shooter[0].style.display = "block"
+		shooter_btn[0].style.display = "none"
+
+	}   
+	shooter_btn[1].onclick = function(){
+		shooter[1].style.display = "block"
+		shooter_btn[1].style.display = "none"
+	}   
+	shooter_btn[2].onclick = function(){
+		shooter[2].style.display = "block"
+		shooter_btn[2].style.display = "none"
+	}   
+	shooter_btn[3].onclick = function(){
+		shooter[3].style.display = "block"
+		shooter_btn[3].style.display = "none"
+	}   
+	shooter_btn[4].onclick = function(){
+		shooter[4].style.display = "block"
+		shooter_btn[4].style.display = "none"
+	}   
+//увеличение
+
+
+
+
+
+document.querySelector(".booton").onclick = function(){
+for(let index = 0; index<5; index = index + 1){
+	
+	flowers[index].style.width="150px"
+}
+}
+	
+	document.querySelector(".booton1").onclick = function(){
+		for(let point = 0; point<5; point = point + 1){
+			shooter[point].style.width="150px"
+	
+		}
+	}
+	document.querySelector(".gorox").onclick = function(){
+		for(let gurox = 0; gurox<5;gurox = gurox + 1){
+			shooter[gurox].src = "1.png"
+		}
+	}
+	document.querySelector(".zombi1").onclick = function(){
+		for(let zombi2 = 0; zombi2<5;zombi2 = zombi2 + 1){
+			zombi3[zombi2].src = "1.jpg"
+		}
+	}
+
+</script>
+</body>
+</html>
